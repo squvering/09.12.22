@@ -1,0 +1,14 @@
+public class LargestDifference {
+    public static int largestDifference(int[] data) {
+      int largestDifference = 0;
+      
+      for(int i = 0; i < data.length; i++){
+        for(int j = 1; j < data.length; j++){
+          if(data[i] <= data[j] && (j - i) > largestDifference)
+            largestDifference = j - i;
+        }
+      }
+        return largestDifference;
+
+    }
+}
